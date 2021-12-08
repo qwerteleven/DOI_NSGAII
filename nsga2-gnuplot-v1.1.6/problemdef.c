@@ -13,7 +13,7 @@
 /* # define kur */
 /* # define pol */
 /* # define vnt */
-/* # define zdt1 */
+# define zdt1 
 /* # define zdt2 */
 /* # define zdt3 */
 /* # define zdt4 */
@@ -23,7 +23,7 @@
 /* # define osy */
 /* # define srn */
 /* # define tnk */
- # define ctp1 
+/* # define ctp1 */
 /* # define ctp2 */
 /* # define ctp3 */
 /* # define ctp4 */

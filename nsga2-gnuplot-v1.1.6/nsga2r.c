@@ -40,7 +40,7 @@ int angle2;
 int main (int argc, char **argv)
 {
     int i;
-    long double hyp;
+    double hyp;
     FILE *fpt1;
     FILE *fpt2;
     FILE *fpt3;
@@ -378,23 +378,23 @@ int main (int argc, char **argv)
     allocate_memory_pop (mixed_pop, 2*popsize);
     randomize();
     initialize_pop (parent_pop);
-    printf("\n Initialization done, now performing first generation");
+    printf("\n Initialization done, now performing first generation\n");
     decode_pop(parent_pop);
     evaluate_pop (parent_pop);
     assign_rank_and_crowding_distance (parent_pop);
     report_pop (parent_pop, fpt1);
-    fprintf(fpt4,"# gen = 1\n");
+    fprintf(fpt4,"\n gen = 1\n");
     report_pop(parent_pop,fpt4);
     fpt6 = fopen("hypervolume.out","w");
     report_hyp(parent_pop,fpt6);
     fclose(fpt6);
-    system("./hv -r \"10000 10000\" hypervolume.out > eschyp.txt");
+    system(".\\hv.exe -r \"10000 10000\" hypervolume.out > eschyp.txt");
     fpt8 = fopen("eschyp.txt","r");
-    fscanf(fpt8," %Lf ", &hyp);
+    fscanf(fpt8,"%lf ", &hyp);
     fclose(fpt8);
-    fprintf(stderr,"1 %Lf \n",hyp);
-    fprintf(fpt7,"1 %Lf \n",hyp);
-    printf("\n gen = 1");
+    fprintf(stderr,"1 %lf \n",hyp);
+    fprintf(fpt7,"1 %lf \n",hyp);
+    printf("\n gen = 1 \n");
     fflush(stdout);
     if (choice!=0)    onthefly_display (parent_pop,gp,1);
     fflush(fpt1);
@@ -414,20 +414,20 @@ int main (int argc, char **argv)
         fill_nondominated_sort (mixed_pop, parent_pop);
         /* Comment following four lines if information for all
         generations is not desired, it will speed up the execution */
-        fprintf(fpt4,"# gen = %d\n",i);
+        fprintf(fpt4,"\n gen = %d \n",i);
         report_pop(parent_pop,fpt4);
         fpt6 = fopen("hypervolume.out","w");
         report_hyp(parent_pop,fpt6);
         fclose(fpt6);
-        system("./hv -r \"10000 10000\" hypervolume.out > eschyp.txt");
+        system(".\\hv.exe -r \"10000 10000\" hypervolume.out > eschyp.txt");
         fpt8 = fopen("eschyp.txt","r");
-        fscanf(fpt8,"%Lf ", &hyp);
+        fscanf(fpt8,"%lf ", &hyp);
         fclose(fpt8);
-        fprintf(stderr,"%d %Lf \n", i, hyp);
-        fprintf(fpt7,"%d %Lf \n", i, hyp);
+        fprintf(stderr,"%d %lf \n", i, hyp);
+        fprintf(fpt7,"%d %lf \n", i, hyp);
         fflush(fpt4);
         if (choice!=0)    onthefly_display (parent_pop,gp,i);
-        printf("\n gen = %d",i);
+        printf("\n gen = %d \n",i);
     }
     printf("\n Generations finished, now reporting solutions");
     report_pop(parent_pop,fpt2);
