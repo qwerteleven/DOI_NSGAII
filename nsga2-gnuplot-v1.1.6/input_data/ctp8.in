@@ -3,13 +3,40 @@
 2
 2
 2
-0 1
 0 10
-0.9
-0.5
+0 10
+0.7
+0.2
 10
 20
 0
 1
 1
 2
+
+  Test problem CTP8
+    # of real variables = 2
+    # of bin variables = 0
+    # of objectives = 2
+    # of constraints = 2
+
+
+popsize: This variable stores the population size (a multiple of 4)  (0 - 25.000)
+ngen: Number of generations                                          
+   
+    nobj: Number of objectives                                  2
+    ncon: Number of constraints                                 2
+    nreal: Number of real variables                             2
+
+min_realvar[i]: minimum value of i^{th} real variable
+max_realvar[i]: maximum value of i^{th} real variable
+
+pcross_real: probability of crossover of real variable          (0.6 - 1.0)
+
+pmut_real: probability of mutation of real variable             0.5
+
+eta_c: distribution index for real variable SBX crossover       (5 - 20)
+eta_m: distribution index for real variable polynomial mutation (5 - 50)
+
+nbin: number of binary variables                                 0
+choice: option to display the data realtime using gnuplot        0

@@ -13,7 +13,7 @@
 /* # define kur */
 /* # define pol */
 /* # define vnt */
-# define zdt1 
+/* # define zdt1 */ 
 /* # define zdt2 */
 /* # define zdt3 */
 /* # define zdt4 */
@@ -30,7 +30,7 @@
 /* # define ctp5 */
 /* # define ctp6 */
 /* # define ctp7 */
-/*# define ctp8*/
+# define ctp8
 
 /*  Test problem SCH1
     # of real variables = 1
@@ -679,8 +679,11 @@ void test_problem (double *xreal, double *xbin, int **gene, double *obj, double 
     double theta, a, b, c, d, e;
     double exp1, exp2;
     g = 1.0 + xreal[1];
+    
     obj[0] = xreal[0];
-    obj[1] = g*(1.0  - sqrt(obj[0]/g));
+    obj[1] = g*(1.0 - sqrt(obj[0]/g));
+
+
     theta = 0.1*PI;
     a = 40.0;
     b = 0.5;
@@ -693,6 +696,8 @@ void test_problem (double *xreal, double *xbin, int **gene, double *obj, double 
     exp2 = fabs(sin(exp2));
     exp2 = a*pow(exp2,d);
     constr[0] = exp1/exp2 - 1.0;
+
+
     theta = -0.05*PI;
     a = 40.0;
     b = 2.0;

@@ -388,7 +388,7 @@ int main (int argc, char **argv)
     fpt6 = fopen("hypervolume.out","w");
     report_hyp(parent_pop,fpt6);
     fclose(fpt6);
-    system(".\\hv.exe -r \"10000 10000\" hypervolume.out > eschyp.txt");
+    system(".\\nsga2-gnuplot-v1.1.6\\hv.exe -r \"10000 10000\" hypervolume.out > eschyp.txt");
     fpt8 = fopen("eschyp.txt","r");
     fscanf(fpt8,"%lf ", &hyp);
     fclose(fpt8);
@@ -419,7 +419,7 @@ int main (int argc, char **argv)
         fpt6 = fopen("hypervolume.out","w");
         report_hyp(parent_pop,fpt6);
         fclose(fpt6);
-        system(".\\hv.exe -r \"10000 10000\" hypervolume.out > eschyp.txt");
+        system(".\\nsga2-gnuplot-v1.1.6\\hv.exe -r \"10000 10000\" hypervolume.out > eschyp.txt");
         fpt8 = fopen("eschyp.txt","r");
         fscanf(fpt8,"%lf ", &hyp);
         fclose(fpt8);
