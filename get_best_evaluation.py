@@ -24,9 +24,9 @@ def main(path):
 
     final_value.sort(key=lambda x: -x[0])
 
-    print("best_values: ", [i for i in final_value[0:5]])
+    print("best_values: ", [i for i in final_value[0:10]])
 
-    print("worst_values: ", [i for i in final_value[-5:-1]])
+    print("worst_values: ", [i for i in final_value[-10:-1]])
 
     print("Done")
 
