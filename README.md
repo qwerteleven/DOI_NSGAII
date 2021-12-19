@@ -16,7 +16,7 @@
 |Hyperstats|Poblation|
 |----------|---------|
 
-<img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/worst_hyperstats.PNG" width="270">  <img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/worst_poblation.PNG" width="270"> 
+<img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/worst_hyperstats.PNG" width="370">  <img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/worst_poblation.PNG" width="370"> 
  
 
 
@@ -25,5 +25,5 @@
 |Hyperstats|Poblation|
 |----------|---------|
 
-<img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/comparition_hyperstats.PNG" width="270">  <img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/comparition_poblation.PNG" width="270"> 
+<img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/comparition_hyperstats.PNG" width="370">  <img src="https://github.com/qwerteleven/DOI_NSGAII/blob/main/assests/comparition_poblations.PNG" width="370"> 
  
